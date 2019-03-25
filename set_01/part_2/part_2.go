@@ -8,7 +8,8 @@ import (
 	"github.com/hashicorp/vault/helper/xor"
 )
 
-func fixedXor(s string, x string) string {
+// return fixed XOR value of 2 hex encoded strings
+func FixedXor(s string, x string) string {
 	encoded_s, err := hex.DecodeString(s)
 	if err != nil {
 		log.Fatal(err)
